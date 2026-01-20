@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orbi - Freelance Leads Hero</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Caveat:wght@500&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        hand: ['Caveat', 'cursive'],
+                    },
+                    colors: {
+                        brand: {
+                            orange: '#FF4F38',
+                            dark: '#080808',
+                            card: '#1C1C1C',
+                            item: '#262626',
+                            muted: '#666666'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #050505;
+            color: white;
+            overflow-x: hidden;
+        }
+        .gradient-blob {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(100px);
+            opacity: 0.8;
+            z-index: -1;
+        }
+        /* Custom scrollbar for the card if needed, though not strictly visible in screenshot */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #333;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col relative">
+
+    <!-- Background Gradients -->
+    <!-- Top Left Gradient -->
+    <div class="gradient-blob w-[800px] h-[800px] -top-[300px] -left-[200px] bg-gradient-to-br from-cyan-400 via-fuchsia-600 to-orange-500 opacity-60 blur-[120px]"></div>
+    
+    <!-- Bottom Right Gradient -->
+    <div class="gradient-blob w-[900px] h-[900px] top-[40%] -right-[300px] bg-gradient-to-tl from-cyan-400 via-fuchsia-600 to-orange-500 opacity-60 blur-[120px]"></div>
+
+    <!-- Navigation -->
+    <nav class="w-full max-w-7xl mx-auto px-6 py-6 flex justify-between items-center z-10">
+        <!-- Logo -->
+        <a href="#" class="text-white">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12.5 12C12.5 10.067 14.067 8.5 16 8.5H24C25.933 8.5 27.5 10.067 27.5 12V14.5H12.5V12Z" fill="white"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M8 20C8 15.5817 11.5817 12 16 12H24C28.4183 12 32 15.5817 32 20C32 24.4183 28.4183 28 24 28H16C11.5817 28 8 24.4183 8 20ZM16 22C16.5523 22 17 21.5523 17 21C17 20.4477 16.5523 20 16 20C15.4477 20 15 20.4477 15 21C15 21.5523 15.4477 22 16 22ZM24 22C24.5523 22 25 21.5523 25 21C25 20.4477 24.5523 20 24 20C23.4477 20 23 20.4477 23 21C23 21.5523 23.4477 22 24 22Z" fill="white"/>
+                <path d="M5 20C5 18.3431 6.34315 17 8 17V23C6.34315 23 5 21.6569 5 20Z" fill="white"/>
+            </svg>
+        </a>
+
+        <!-- Nav Button -->
+        <a href="#" class="px-5 py-2 rounded-full border border-white/20 bg-white/5 text-sm font-medium hover:bg-white/10 transition-colors backdrop-blur-sm">
+            Join the beta
+        </a>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-grow flex flex-col items-center justify-start pt-12 px-4 z-10 w-full max-w-7xl mx-auto">
+        
+        <!-- Hero Text -->
+        <div class="text-center max-w-4xl mx-auto mb-10">
+            <h1 class="text-5xl md:text-7xl font-medium tracking-tight leading-[1.1] mb-6">
+                Your daily list of<br>
+                <span class="text-[#555555]">fresh freelance leads</span>
+            </h1>
+            
+            <p class="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
+                Orbi is an agent that <strong class="text-white font-semibold">finds freelance leads</strong> for you. So you can focus on doing great work, not hunting for it.
+            </p>
+        </div>
+
+        <!-- Input Form -->
+        <div class="w-full max-w-[480px] mb-4">
+            <div class="relative flex items-center bg-[#0F0F0F] border border-white/10 rounded-full p-1.5 shadow-lg">
+                <input type="email" placeholder="Enter your email" class="flex-grow bg-transparent border-none outline-none text-white px-5 py-3 placeholder-gray-500 text-base">
+                <button class="bg-[#FF4433] hover:bg-[#ff5c4d] text-white font-medium px-6 py-2.5 rounded-full transition-colors text-sm whitespace-nowrap">
+                    Join the beta
+                </button>
+            </div>
+        </div>
+        
+        <p class="text-gray-600 text-xs mb-16">First 100 sign-ups get a lifetime discount.</p>
+
+        <!-- App Preview Card -->
+        <div class="relative w-full max-w-[420px]">
+            
+            <!-- Handwritten Note (Absolute positioned) -->
+            <div class="absolute -right-[160px] top-[80px] hidden md:block w-40">
+                <p class="font-hand text-2xl text-white leading-tight -rotate-6">
+                    Orbi makes finding leads this easy
+                </p>
+                <svg class="w-12 h-12 text-white mt-2 ml-2" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M45 5C40 15 30 25 10 35M10 35L20 28M10 35L22 42" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+
+            <!-- Card Container -->
+            <div class="bg-[#1C1C1C] rounded-3xl border border-white/5 p-6 shadow-2xl overflow-hidden">
+                
+                <!-- Card Header -->
+                <div class="flex items-center gap-3 mb-1">
+                    <div class="relative w-6 h-6 flex items-center justify-center">
+                        <svg class="animate-spin w-6 h-6 text-[#FF4433]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                        </svg>
+                        <!-- Sun rays effect simulation -->
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="w-1 h-1 bg-[#FF4433] rounded-full"></div>
+                        </div>
+                    </div>
+                    <h3 class="text-white font-semibold text-lg">Searching for leads</h3>
+                </div>
+                
+                <p class="text-gray-500 text-sm mb-5 pl-9"><span class="text-white font-medium">36</span> leads found today</p>
+
+                <!-- List Items -->
+                <div class="space-y-3">
+                    
+                    <!-- Item 1: LinkedIn -->
+                    <div class="bg-[#262626] rounded-xl p-3 flex items-center gap-3 border border-white/5 hover:border-white/10 transition-colors cursor-pointer group">
+                        <div class="w-10 h-10 rounded-full bg-[#0077B5] flex items-center justify-center flex-shrink-0">
+                            <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                        </div>
+                        <div class="flex-grow min-w-0">
+                            <h4 class="text-white text-sm font-medium truncate">Marketing Site Cleanup</h4>
+                            <p class="text-gray-500 text-xs truncate">Fix spacing, improve load spe...</p>
+                        </div>
+                        <div class="bg-[#1A3D2F] text-[#4ADE80] text-[10px] font-bold px-1.5 py-0.5 rounded flex items-center gap-0.5">
+                            84%
+                            <svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+                        </div>
+                    </div>
+
+                    <!-- Item 2: Reddit -->
+                    <div class="bg-[#262626] rounded-xl p-3 flex items-center gap-3 border border-white/5 hover:border-white/10 transition-colors cursor-pointer group">
+                        <div class="w-10 h-10 rounded-full bg-[#FF4500] flex items-center justify-center flex-shrink-0">
+                            <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2.033 16.01c.564-1.789 1.632-3.932 1.821-4.474.273-.787-.211-1.536-1.084-1.536-1.647 0-3.054 1.135-3.054 2.419 0 .533.237 1.038.635 1.443.418.425.422 1.227.033 1.728-.184.237-.49.366-.791.366-.78 0-1.232-.769-1.014-1.411.284-.835 1.362-4.029 1.594-4.655.633-1.706-.089-3.449-1.975-3.449-2.403 0-4.458 1.888-4.458 4.003 0 1.054.562 1.996 1.43 2.656.564.429.523 1.254.023 1.727-.184.174-.413.261-.645.261-.685 0-1.18-.535-1.043-1.181.713-3.368 3.449-5.654 6.386-5.654 2.761 0 5.059 1.992 5.433 4.709.053.39.387.691.78.691.123 0 .25-.03.371-.092 1.09-.556 2.469-.556 3.558 0 .522.266.781.906.579 1.432-.216.562-.855.777-1.355.487-.456-.266-1.035-.266-1.491 0-.406.234-.526.76-.269 1.174.456.734 1.569 2.529 1.569 2.529.523.841-.076 1.906-1.062 1.906-1.228 0-2.167-1.256-1.726-2.366l.002-.006z"/></svg>
+                        </div>
+                        <div class="flex-grow min-w-0">
+                            <h4 class="text-white text-sm font-medium truncate">Product Feature Page</h4>
+                            <p class="text-gray-500 text-xs truncate">Need a standalone page for o...</p>
+                        </div>
+                        <div class="bg-[#1A3D2F] text-[#4ADE80] text-[10px] font-bold px-1.5 py-0.5 rounded flex items-center gap-0.5">
+                            85%
+                            <svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+                        </div>
+                    </div>
+
+                    <!-- Item 3: Webflow (Partial) -->
+                    <div class="bg-[#262626] rounded-xl p-3 flex items-center gap-3 border border-white/5 opacity-50">
+                        <div class="w-10 h-10 rounded-full bg-[#146EF5] flex items-center justify-center flex-shrink-0">
+                            <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12.74 7.91c-.45 0-.85.36-.9.82l-.62 5.27c-.03.22-.24.39-.47.39h-.01c-.22 0-.42-.16-.46-.38l-.74-4.2c-.09-.53-.55-.92-1.09-.92h-1.6c-.54 0-1 .39-1.09.92l-.74 4.2c-.04.22-.24.38-.46.38h-.01c-.23 0-.44-.17-.47-.39l-.62-5.27c-.05-.46-.45-.82-.9-.82h-2.4c-.57 0-1.02.48-.99 1.05l1.34 11.31c.06.51.5.91 1.02.91h2.64c.52 0 .96-.4 1.02-.91l.66-5.58c.03-.22.21-.39.44-.39s.41.17.44.39l.66 5.58c.06.51.5.91 1.02.91h2.64c.52 0 .96-.4 1.02-.91l1.34-11.31c.03-.57-.42-1.05-.99-1.05h-2.4z"/></svg>
+                        </div>
+                        <div class="flex-grow min-w-0">
+                            <h4 class="text-white text-sm font-medium truncate">Webflow Development</h4>
+                            <div class="h-2 w-24 bg-gray-700 rounded mt-1"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
